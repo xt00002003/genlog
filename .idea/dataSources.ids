@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - databee@172.26.50.72" uuid="b525ff28-bc3f-463b-acf8-9b90d5e54357">
+    <database-info product="MySQL" version="5.5.41-0ubuntu0.12.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="databee">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="cakesdelights"/>
+      <schema id="3" name="chanzhi"/>
+      <schema id="4" name="hive_local_meta"/>
+      <schema id="5" name="information_schema"/>
+      <schema id="6" name="lanyun_v_3.sql"/>
+      <schema id="7" name="mysql"/>
+      <schema id="8" name="performance_schema"/>
+      <schema id="9" name="phpmyadmin"/>
+      <schema id="10" name="RNJ"/>
+      <schema id="11" name="shopping"/>
+      <schema id="12" name="shoppingportal"/>
+      <table id="13" parent="1" name="agent"/>
+      <table id="14" parent="1" name="app">
+        <comment>应用注册记录表</comment>
+      </table>
+      <table id="15" parent="1" name="app_device">
+        <comment>设备表</comment>
+      </table>
+      <table id="16" parent="1" name="channel"/>
+      <table id="17" parent="1" name="channel_statistics_day">
+        <comment>设备分析表</comment>
+      </table>
+      <table id="18" parent="1" name="source"/>
+      <table id="19" parent="1" name="test_country">
+        <comment>国家列表</comment>
+      </table>
+      <table id="20" parent="1" name="test_user">
+        <comment>测试用户表</comment>
+      </table>
+      <table id="21" parent="1" name="test_user_history">
+        <comment>用户历史记录表,在留存率的计算中需要用到这个表的记录</comment>
+      </table>
+      <routine id="22" parent="1" name="create_new_test_user">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="23" parent="1" name="rand_string">
+        <routine-kind>FUNCTION</routine-kind>
+      </routine>
+      <column id="24" parent="13" name="id">
+        <comment>主键ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="25" parent="13" name="name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="26" parent="13" name="description">
+        <comment>描述</comment>
+        <data-type>varchar(256)|0</data-type>
+      </column>
+      <column id="27" parent="13" name="created_user">
+        <comment>创建人</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(64)|0</data-type>
+      </column>
+      <column id="28" parent="13" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="29" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="30" parent="14" name="id">
+        <comment>主键ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="31" parent="14" name="name">
+        <comment>应用名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="32" parent="14" name="pkg_name">
+        <comment>包名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="33" parent="14" name="version_code">
+        <comment>版本号</comment>
+        <data-type>varchar(32)|0</data-type>
+      </column>
+      <column id="34" parent="14" name="version_name">
+        <comment>版本名称</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="35" parent="14" name="description">
+        <comment>描述</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="36" parent="14" name="created_user">
+        <comment>创建人</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(64)|0</data-type>
+      </column>
+      <column id="37" parent="14" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="38" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="39" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="40" parent="15" name="app_id">
+        <comment>应用ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="41" parent="15" name="device_id">
+        <comment>设备号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="42" parent="15" name="imei">
+        <comment>设备IMEI</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="43" parent="15" name="cu_ref">
+        <comment>设备cu</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="44" parent="15" name="model">
+        <comment>设备型号</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="45" parent="15" name="language">
+        <comment>语言</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="46" parent="15" name="country">
+        <comment>国家</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="47" parent="15" name="channel_id">
+        <comment>refer标识</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="48" parent="15" name="first_time">
+        <comment>首次时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <index id="49" parent="15" name="app_device_idx">
+        <columns>app_id
+device_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="50" parent="15" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="51" parent="16" name="id">
+        <comment>主键ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="52" parent="16" name="app_id">
+        <comment>应用ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="53" parent="16" name="name">
+        <comment>refer名称(type_mserchant_gourp)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="54" parent="16" name="type">
+        <comment>GPPAID,NoGp</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="55" parent="16" name="agent">
+        <comment>合作方</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="56" parent="16" name="source">
+        <comment>广告来源(google,facebook)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="57" parent="16" name="group">
+        <comment>自增GroupID</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="58" parent="16" name="tracker">
+        <comment>跟踪号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="59" parent="16" name="tracker_link">
+        <comment>跟踪链接</comment>
+        <data-type>varchar(256)|0</data-type>
+      </column>
+      <column id="60" parent="16" name="description">
+        <comment>描述</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <column id="61" parent="16" name="created_user">
+        <comment>创建人</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(64)|0</data-type>
+      </column>
+      <column id="62" parent="16" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="63" parent="16" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="64" parent="17" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="65" parent="17" name="app_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="66" parent="17" name="app_id_local">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="67" parent="17" name="agent">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="68" parent="17" name="source">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="69" parent="17" name="group">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="70" parent="17" name="country">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="71" parent="17" name="channel_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="72" parent="17" name="day">
+        <comment>统计时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="73" parent="17" name="news">
+        <comment>新增用户</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="74" parent="17" name="news_by_hour">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="75" parent="17" name="actives">
+        <comment>活跃用户</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="76" parent="17" name="actives_by_hour">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="77" parent="17" name="starts">
+        <comment>启动次数</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="78" parent="17" name="starts_by_hour">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="79" parent="17" name="total">
+        <comment>总用户数</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="80" parent="17" name="keep_1">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="81" parent="17" name="keep_3">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="82" parent="17" name="keep_7">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="83" parent="17" name="keep_30">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="84" parent="17" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="85" parent="18" name="id">
+        <comment>主键ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="86" parent="18" name="name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="87" parent="18" name="description">
+        <comment>描述</comment>
+        <data-type>varchar(256)|0</data-type>
+      </column>
+      <column id="88" parent="18" name="created_user">
+        <comment>创建人</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(64)|0</data-type>
+      </column>
+      <column id="89" parent="18" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="90" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="91" parent="19" name="id">
+        <comment>主键自动增长</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="92" parent="19" name="uuid">
+        <comment>用来标识同一记录不同站点的版本</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)|0</data-type>
+      </column>
+      <column id="93" parent="19" name="country_code">
+        <comment>国家代码</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="94" parent="19" name="country_name">
+        <comment>国家名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="95" parent="19" name="region_code">
+        <comment>pt_region表中的code</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="96" parent="19" name="language_code">
+        <comment>pt_language表中的code</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <key id="97" parent="19" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="98" parent="20" name="id">
+        <comment>主键自动增长</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="99" parent="20" name="uuid">
+        <comment>用来标识同一记录不同站点的版本</comment>
+        <data-type>varchar(40)|0</data-type>
+      </column>
+      <column id="100" parent="20" name="im">
+        <comment>IMEI</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="101" parent="20" name="mac">
+        <comment>mac</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="102" parent="20" name="ai">
+        <comment>ANDROID_ID</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="103" parent="20" name="t">
+        <comment>model</comment>
+        <data-type>varchar(16)|0</data-type>
+      </column>
+      <column id="104" parent="20" name="c">
+        <comment>country</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(16)|0</data-type>
+      </column>
+      <column id="105" parent="20" name="la">
+        <comment>language</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(16)|0</data-type>
+      </column>
+      <column id="106" parent="20" name="create_time">
+        <comment>创建时间yyyy-MM-dd</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <index id="107" parent="20" name="idx_ai">
+        <columns>ai
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="108" parent="20" name="idx_im">
+        <columns>im
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="109" parent="20" name="idx_mac">
+        <columns>mac
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="110" parent="20" name="idx_uuid">
+        <columns>uuid
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="111" parent="20" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="112" parent="21" name="id">
+        <comment>主键自动增长</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="113" parent="21" name="user_id">
+        <comment>用来标识同一记录不同站点的版本</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+      </column>
+      <column id="114" parent="21" name="app_id">
+        <comment>国家代码</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+      </column>
+      <column id="115" parent="21" name="pkg_name">
+        <comment>国家代码</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="116" parent="21" name="channel_name">
+        <comment>国家名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="117" parent="21" name="create_time">
+        <comment>创建时间yyyy-MM-dd</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <index id="118" parent="21" name="idx_user_id">
+        <columns>user_id
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="119" parent="21" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <argument id="120" parent="23">
+        <direction>RETURN</direction>
+        <data-type>varchar(255)|0</data-type>
+      </argument>
+      <argument id="121" parent="23" name="n">
+        <direction>IN</direction>
+        <data-type>int(11)|0</data-type>
+      </argument>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - databee@172.26.50.105" uuid="04dc25a7-04f1-43c3-9dd1-0eed7f731e2a">
+    <database-info product="MySQL" version="5.6.20-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="databee">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="aota"/>
+      <schema id="3" name="appmarket"/>
+      <schema id="4" name="appstore"/>
+      <schema id="5" name="appstore_slave1"/>
+      <schema id="6" name="bigdata_dashboard"/>
+      <schema id="7" name="browsedb"/>
+      <schema id="8" name="chat_cms"/>
+      <schema id="9" name="club"/>
+      <schema id="10" name="contact"/>
+      <schema id="11" name="content"/>
+      <schema id="12" name="content_in"/>
+      <schema id="13" name="cop"/>
+      <schema id="14" name="credit"/>
+      <schema id="15" name="credit_monitor"/>
+      <schema id="16" name="dashboard_hive"/>
+      <schema id="17" name="diagnostics"/>
+      <schema id="18" name="employees"/>
+      <schema id="19" name="feedback"/>
+      <schema id="20" name="fmp"/>
+      <schema id="21" name="fmp_china"/>
+      <schema id="22" name="fmp_tcl"/>
+      <schema id="23" name="hivedb"/>
+      <schema id="24" name="information_schema"/>
+      <schema id="25" name="iread"/>
+      <schema id="26" name="iread_test"/>
+      <schema id="27" name="log_analysis"/>
+      <schema id="28" name="loho"/>
+      <schema id="29" name="mie_cd_normal"/>
+      <schema id="30" name="moveapp"/>
+      <schema id="31" name="mysql"/>
+      <schema id="32" name="performance_schema"/>
+      <schema id="33" name="portal"/>
+      <schema id="34" name="pp"/>
+      <schema id="35" name="rebot"/>
+      <schema id="36" name="sonar"/>
+      <schema id="37" name="SpiderIn"/>
+      <schema id="38" name="ssv"/>
+      <schema id="39" name="tempdb"/>
+      <schema id="40" name="test"/>
+      <schema id="41" name="tworking"/>
+      <schema id="42" name="usercare"/>
+      <schema id="43" name="usercare_tcl"/>
+      <schema id="44" name="userforum"/>
+      <schema id="45" name="webcall"/>
+      <schema id="46" name="wristband"/>
+      <table id="47" parent="1" name="agent"/>
+      <table id="48" parent="1" name="app">
+        <comment>应用注册记录表</comment>
+      </table>
+      <table id="49" parent="1" name="app_device">
+        <comment>设备表</comment>
+      </table>
+      <table id="50" parent="1" name="channel"/>
+      <table id="51" parent="1" name="channel_statistics_day">
+        <comment>设备分析表</comment>
+      </table>
+      <table id="52" parent="1" name="source"/>
+      <table id="53" parent="1" name="test_user">
+        <comment>测试用户表</comment>
+      </table>
+      <table id="54" parent="1" name="test_country">
+        <comment>国家列表</comment>
+      </table>
+      <table id="55" parent="1" name="test_user_history">
+        <comment>用户历史记录表,在留存率的计算中需要用到这个表的记录</comment>
+      </table>
+      <routine id="56" parent="1" name="rand_string">
+        <routine-kind>FUNCTION</routine-kind>
+      </routine>
+      <routine id="57" parent="1" name="create_new_test_user">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <column id="58" parent="47" name="id">
+        <comment>主键ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="59" parent="47" name="name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="60" parent="47" name="description">
+        <comment>描述</comment>
+        <data-type>varchar(256)|0</data-type>
+      </column>
+      <column id="61" parent="47" name="created_user">
+        <comment>创建人</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(64)|0</data-type>
+      </column>
+      <column id="62" parent="47" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="63" parent="47" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="64" parent="48" name="id">
+        <comment>主键ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="65" parent="48" name="name">
+        <comment>应用名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="66" parent="48" name="pkg_name">
+        <comment>包名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="67" parent="48" name="version_code">
+        <comment>版本号</comment>
+        <data-type>varchar(32)|0</data-type>
+      </column>
+      <column id="68" parent="48" name="version_name">
+        <comment>版本名称</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="69" parent="48" name="description">
+        <comment>描述</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="70" parent="48" name="created_user">
+        <comment>创建人</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(64)|0</data-type>
+      </column>
+      <column id="71" parent="48" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="72" parent="48" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="73" parent="49" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="74" parent="49" name="app_id">
+        <comment>应用ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="75" parent="49" name="device_id">
+        <comment>设备号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="76" parent="49" name="imei">
+        <comment>设备IMEI</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="77" parent="49" name="cu_ref">
+        <comment>设备cu</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="78" parent="49" name="model">
+        <comment>设备型号</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="79" parent="49" name="language">
+        <comment>语言</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="80" parent="49" name="country">
+        <comment>国家</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="81" parent="49" name="channel_id">
+        <comment>refer标识</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="82" parent="49" name="first_time">
+        <comment>首次时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <index id="83" parent="49" name="app_device_idx">
+        <columns>app_id
+device_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="84" parent="49" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="85" parent="50" name="id">
+        <comment>主键ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="86" parent="50" name="app_id">
+        <comment>应用ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="87" parent="50" name="name">
+        <comment>refer名称(type_mserchant_gourp)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="88" parent="50" name="type">
+        <comment>GPPAID,NoGp</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="89" parent="50" name="agent">
+        <comment>合作方</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="90" parent="50" name="source">
+        <comment>广告来源(google,facebook)</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="91" parent="50" name="group">
+        <comment>自增GroupID</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="92" parent="50" name="tracker">
+        <comment>跟踪号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="93" parent="50" name="tracker_link">
+        <comment>跟踪链接</comment>
+        <data-type>varchar(256)|0</data-type>
+      </column>
+      <column id="94" parent="50" name="description">
+        <comment>描述</comment>
+        <data-type>varchar(500)|0</data-type>
+      </column>
+      <column id="95" parent="50" name="created_user">
+        <comment>创建人</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(64)|0</data-type>
+      </column>
+      <column id="96" parent="50" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="97" parent="50" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="98" parent="51" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="99" parent="51" name="app_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="100" parent="51" name="app_id_local">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="101" parent="51" name="agent">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="102" parent="51" name="source">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="103" parent="51" name="group">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="104" parent="51" name="country">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)|0</data-type>
+      </column>
+      <column id="105" parent="51" name="channel_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="106" parent="51" name="day">
+        <comment>统计时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="107" parent="51" name="news">
+        <comment>新增用户</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="108" parent="51" name="news_by_hour">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="109" parent="51" name="actives">
+        <comment>活跃用户</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="110" parent="51" name="actives_by_hour">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="111" parent="51" name="starts">
+        <comment>启动次数</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="112" parent="51" name="starts_by_hour">
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="113" parent="51" name="total">
+        <comment>总用户数</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="114" parent="51" name="keep_1">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="115" parent="51" name="keep_3">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="116" parent="51" name="keep_7">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="117" parent="51" name="keep_30">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="118" parent="51" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="119" parent="52" name="id">
+        <comment>主键ID</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="120" parent="52" name="name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="121" parent="52" name="description">
+        <comment>描述</comment>
+        <data-type>varchar(256)|0</data-type>
+      </column>
+      <column id="122" parent="52" name="created_user">
+        <comment>创建人</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(64)|0</data-type>
+      </column>
+      <column id="123" parent="52" name="created_time">
+        <comment>创建时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime|0</data-type>
+      </column>
+      <key id="124" parent="52" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="125" parent="53" name="id">
+        <comment>主键自动增长</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="126" parent="53" name="uuid">
+        <comment>用来标识同一记录不同站点的版本</comment>
+        <data-type>varchar(40)|0</data-type>
+      </column>
+      <column id="127" parent="53" name="im">
+        <comment>IMEI</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="128" parent="53" name="mac">
+        <comment>mac</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="129" parent="53" name="ai">
+        <comment>ANDROID_ID</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <column id="130" parent="53" name="t">
+        <comment>model</comment>
+        <data-type>varchar(16)|0</data-type>
+      </column>
+      <column id="131" parent="53" name="c">
+        <comment>country</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(16)|0</data-type>
+      </column>
+      <column id="132" parent="53" name="la">
+        <comment>language</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(16)|0</data-type>
+      </column>
+      <column id="133" parent="53" name="create_time">
+        <comment>创建时间yyyy-MM-dd</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <index id="134" parent="53" name="idx_ai">
+        <columns>ai
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="135" parent="53" name="idx_create_time">
+        <columns>create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="136" parent="53" name="idx_im">
+        <columns>im
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="137" parent="53" name="idx_mac">
+        <columns>mac
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="138" parent="53" name="idx_uuid">
+        <columns>uuid
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="139" parent="53" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="140" parent="54" name="id">
+        <comment>主键自动增长</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="141" parent="54" name="uuid">
+        <comment>用来标识同一记录不同站点的版本</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)|0</data-type>
+      </column>
+      <column id="142" parent="54" name="country_code">
+        <comment>国家代码</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="143" parent="54" name="country_name">
+        <comment>国家名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="144" parent="54" name="region_code">
+        <comment>大洲</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="145" parent="54" name="language_code">
+        <comment>语言</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <key id="146" parent="54" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="147" parent="55" name="id">
+        <comment>主键自动增长</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="148" parent="55" name="user_id">
+        <comment>用来标识同一记录不同站点的版本</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+      </column>
+      <column id="149" parent="55" name="app_id">
+        <comment>国家代码</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+      </column>
+      <column id="150" parent="55" name="pkg_name">
+        <comment>国家代码</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="151" parent="55" name="channel_name">
+        <comment>国家名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <column id="152" parent="55" name="create_time">
+        <comment>创建时间yyyy-MM-dd</comment>
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <index id="153" parent="55" name="idx_user_id">
+        <columns>user_id
+create_time</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="154" parent="55" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <argument id="155" parent="56">
+        <direction>RETURN</direction>
+        <data-type>varchar(255)|0</data-type>
+      </argument>
+      <argument id="156" parent="56" name="n">
+        <direction>IN</direction>
+        <data-type>int(11)|0</data-type>
+      </argument>
+    </database-model>
+  </data-source>
+</component>
