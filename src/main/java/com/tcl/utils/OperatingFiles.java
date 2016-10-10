@@ -143,15 +143,16 @@ public class OperatingFiles {
     public static void main(String[] args) throws IOException {
         OperatingFiles ofs = new OperatingFiles();
 //        System.out.println("\n=======create dir=======");
-        String dir = "/databee-test-log/2016-09-20";
+//        String dir = "/databee-test-log/2016-09-20";
+        String dir = "/sparkHistoryLogs";
         ofs.createDir(dir);
-        File databeeLogDir=new File("/data/log/databee/log/2016-09-20");
-        File[] logs=databeeLogDir.listFiles();
-        String localPath="/data/log/databee/log/2016-09-20/";
-        for (File log:logs){
-            System.out.println("\n======= file  name:======="+localPath+log.getName());
-            ofs.copyFile(localPath+log.getName(), dir);
-        }
+//        File databeeLogDir=new File("/data/log/databee/log/2016-09-20");
+//        File[] logs=databeeLogDir.listFiles();
+//        String localPath="/data/log/databee/log/2016-09-20/";
+//        for (File log:logs){
+//            System.out.println("\n======= file  name:======="+localPath+log.getName());
+//            ofs.copyFile(localPath+log.getName(), dir);
+//        }
 //        System.out.println("\n=======copy file=======");
 //        String src = "/data/docs/hello.lzo";
 //        ofs.copyFile(src, dir);
