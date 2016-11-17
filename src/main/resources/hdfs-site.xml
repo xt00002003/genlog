@@ -27,19 +27,19 @@
     </property>
     <property>
         <name>dfs.namenode.rpc-address.dev-hdfs.nn1</name>
-        <value>10.115.101.245:8020</value>
+        <value>localhost:8020</value>
     </property>
     <property>
         <name>dfs.namenode.http-address.dev-hdfs.nn1</name>
-        <value>10.115.101.245:50070</value>
+        <value>localhost:50070</value>
     </property>
     <property>
         <name>dfs.namenode.rpc-address.dev-hdfs.nn2</name>
-        <value>10.115.101.246:8020</value>
+        <value>localhost:8020</value>
     </property>
     <property>
         <name>dfs.namenode.http-address.dev-hdfs.nn2</name>
-        <value>10.115.101.246:50070</value>
+        <value>localhost:50070</value>
     </property>
 
     <property>
