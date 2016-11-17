@@ -1,9 +1,9 @@
-package com.tcl.service;
+package com.dark.service;
 
-import com.tcl.dao.CountryServiceImpl;
-import com.tcl.dao.UserDaoImpl;
-import com.tcl.entity.CountryEntity;
-import com.tcl.entity.UserEntity;
+import com.dark.dao.CountryServiceImpl;
+import com.dark.dao.UserDaoImpl;
+import com.dark.entity.CountryEntity;
+import com.dark.entity.UserEntity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

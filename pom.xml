@@ -102,7 +102,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.4.0</version>
         <configuration>
-          <mainClass>com.tcl.utils.OperatingFiles</mainClass>
+          <mainClass>com.dark.utils.OperatingFiles</mainClass>
           <includePluginDependencies>false</includePluginDependencies>
         </configuration>
       </plugin>

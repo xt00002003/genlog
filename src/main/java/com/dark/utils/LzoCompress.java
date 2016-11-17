@@ -1,4 +1,4 @@
-package com.tcl.utils;
+package com.dark.utils;
 
 /**
  *

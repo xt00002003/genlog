@@ -1,4 +1,4 @@
-package com.tcl.entity;
+package com.dark.entity;
 
 /**
  * Created by tengxue on 16-9-7.

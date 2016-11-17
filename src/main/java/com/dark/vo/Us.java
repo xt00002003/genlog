@@ -1,4 +1,4 @@
-package com.tcl.vo;
+package com.dark.vo;
 
 /**
  * Created by tengxue on 16-9-7.

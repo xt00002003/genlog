@@ -1,4 +1,4 @@
-package com.tcl.utils;
+package com.dark.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

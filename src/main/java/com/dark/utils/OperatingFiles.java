@@ -1,4 +1,4 @@
-package com.tcl.utils;
+package com.dark.utils;
 
 import com.hadoop.compression.lzo.LzoCodec;
 import org.anarres.lzo.LzoAlgorithm;

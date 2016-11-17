@@ -1,6 +1,6 @@
-package com.tcl.dao;
+package com.dark.dao;
 
-import com.tcl.entity.CountryEntity;
+import com.dark.entity.CountryEntity;
 
 import java.sql.ResultSet;
 

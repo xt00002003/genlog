@@ -1,6 +1,6 @@
-package com.tcl.dao;
+package com.dark.dao;
 
-import com.tcl.entity.AppEntity;
+import com.dark.entity.AppEntity;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;

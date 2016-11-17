@@ -1,6 +1,6 @@
-package com.tcl.dao;
+package com.dark.dao;
 
-import com.tcl.entity.ChannelEntity;
+import com.dark.entity.ChannelEntity;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;

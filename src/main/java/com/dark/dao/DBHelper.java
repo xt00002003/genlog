@@ -1,6 +1,6 @@
-package com.tcl.dao;
+package com.dark.dao;
 
-import com.tcl.utils.PropertiesUtils;
+import com.dark.utils.PropertiesUtils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

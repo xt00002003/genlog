@@ -1,20 +1,20 @@
-package com.tcl.service;
+package com.dark.service;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.tcl.dao.AppDaoImpl;
-import com.tcl.dao.ChannelDaoImpl;
-import com.tcl.dao.UserDaoImpl;
-import com.tcl.dao.UserHistoryDaoImpl;
-import com.tcl.entity.AppEntity;
-import com.tcl.entity.ChannelEntity;
-import com.tcl.entity.UserEntity;
-import com.tcl.entity.UserHistoryeEntity;
-import com.tcl.utils.LzoCompress;
-import com.tcl.utils.OperatingFiles;
-import com.tcl.utils.PropertiesUtils;
-import com.tcl.vo.Se;
-import com.tcl.vo.Us;
+import com.dark.dao.AppDaoImpl;
+import com.dark.dao.ChannelDaoImpl;
+import com.dark.dao.UserDaoImpl;
+import com.dark.dao.UserHistoryDaoImpl;
+import com.dark.entity.AppEntity;
+import com.dark.entity.ChannelEntity;
+import com.dark.entity.UserEntity;
+import com.dark.entity.UserHistoryeEntity;
+import com.dark.utils.LzoCompress;
+import com.dark.utils.OperatingFiles;
+import com.dark.utils.PropertiesUtils;
+import com.dark.vo.Se;
+import com.dark.vo.Us;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
